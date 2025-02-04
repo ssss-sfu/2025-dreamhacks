@@ -10,6 +10,12 @@ $color-text: #fff;
 $color-text-heading: #8ad5ff;
 $color-text-heading-fallback: #e725ff;
 
+$color-text-light-heading: #E4F7F3;
+$color-text-subheading: #FFEEC6;
+$color-gradient-start: #5bcbff;
+$color-gradient-end: #fd89ff;
+
+
 /*
   Typography
 */
@@ -31,7 +37,8 @@ $color-text-heading-fallback: #e725ff;
 
 $text-size: clamp(1rem, 2vw, 1.25rem);
 $text-size-h1: clamp(2.5rem, 8vw, 5.94rem);
-$text-size-h2: clamp(1.5rem, 6vw, 3rem);
+$text-size-h2: clamp(1.6rem, 6vw, 3.3rem);
+$text-size-h3: clamp(1.4rem, 5vw, 2.5rem);
 $text-size-button: clamp(1.25rem, 4vw, 2.25rem);
 
 /*
