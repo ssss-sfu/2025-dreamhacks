@@ -35,6 +35,12 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    margin-right: 2dvw;
+    margin-left: 2dvw;
+    @include viewport(mobile) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   .icon-container {
@@ -43,12 +49,6 @@
     place-items: center;
     padding: 2em 0;
     gap: 1em;
-    margin-right: 2dvw;
-    margin-left: 2dvw;
-    @include viewport(mobile) {
-      margin-right: 0;
-      margin-left: 0;
-    }
   }
 
   @include viewport(desktop) {
