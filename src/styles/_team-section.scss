@@ -1,0 +1,70 @@
+@import "_tokens.scss";
+
+
+#team {
+  #exec-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 5em 1em;
+    row-gap: 5em;
+    column-gap: 1em;
+    flex: 1 1 0;
+
+    @include viewport(tablet-desktop) {
+      padding: 3em 2em 1em;
+    }
+    
+    @include viewport(mobile) {
+      padding: 3em 0em 1em;
+    }
+    .exec-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex;
+      align-items: center;
+
+      .exec-img {
+        width: 5em;
+        height: 5em;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: filter 0.25s ease-in-out;
+      }
+
+      .exec-desc-1, .exec-desc-2 {
+        display: none;
+        transition: visibility 0.25s ease-in-out;
+
+      }
+
+      &:hover {
+        .exec-img {
+          filter: grayscale(0%);
+        }
+
+        .exec-desc-1 {
+          display: block;
+          position: absolute;
+          width: 50em;
+          top: 125%;
+          left: 50%;
+          transform: translate(-50%, -50%); /* Center the child */
+          text-align: center;
+        }
+        .exec-desc-2 {
+          display: block;
+          position: absolute;
+          width: 50em;
+          top: 155%;
+          left: 50%;
+          transform: translate(-50%, -50%); /* Center the child */
+          text-align: center;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

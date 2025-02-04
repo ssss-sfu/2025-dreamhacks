@@ -1,0 +1,94 @@
+@import "./tokens.scss";
+
+
+#hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  gap: 2rem;
+  padding-top: 0em;
+
+  h3 {
+    color: white;
+    background: transparent;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    -moz-background-clip: unset;
+    -moz-text-fill-color: unset;
+    margin-bottom: 2.81rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  p {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  img#hero-image {
+    width: 32em;
+    margin-left: -5%;
+    margin-right: -5%;
+  }
+
+  @include viewport(desktop) {
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  @include viewport(tablet-desktop) {
+    h1 {
+      font-size: 3.5em;
+    }
+    img#hero-image {
+      width: min(32em, 60vw);
+    }
+  }
+
+  @include viewport(tablet) {
+    h1 {
+      font-size: 2.5em;
+    }
+
+    img#hero-image {
+      width: min(25em, 50vw);
+    }
+  }
+
+  @include viewport(mobile) {
+    flex-direction: column;
+    img#hero-image {
+      width: 90%;
+      z-index: 0;
+    }
+  }
+
+  article {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   flex: 1;
+   justify-content: flex-start;
+   min-width: 0;
+   width: fit-content;
+  }
+}
+
+@include viewport(mobile) {
+  #hero-section {
+    text-align: center;
+  }
+
+  #intro-image-section {
+    padding-top: 8em;
+  }
+
+  #hero-section {
+    padding-top: 0em;
+  }
+}

@@ -1,5 +1,5 @@
-# 2024-chaoshacks
-Website for SystemsHacks 2024 - ChaosHacks
+# 2025-chaoshacks
+Website for SystemsHacks 2025 - DreamHacks
 
 ## Compiling SCSS
 To compile all the scss files in src folder into compressed single main.css file in build folder, do this:
