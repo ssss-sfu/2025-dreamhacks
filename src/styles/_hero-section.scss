@@ -1,23 +1,27 @@
 @import "./tokens.scss";
 
-
 #hero-section {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.5em;
   gap: 2rem;
   padding-top: 0em;
+  
+  h1 {
+    text-wrap: nowrap;
+  }
 
   h3 {
-    color: white;
+    color: $color-text-subheading;
     background: transparent;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
     -moz-background-clip: unset;
     -moz-text-fill-color: unset;
     margin-bottom: 2.81rem;
+    font-size: $text-size-h3;
   }
 
   a {
@@ -27,6 +31,11 @@
 
   p {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
+    text-wrap: pretty;
+  }
+
+  .medium {
+    font-weight: 600;
   }
 
   img#hero-image {
@@ -41,15 +50,40 @@
     }
   }
 
+  .hero-image-container {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin: 0;
+  }
+
+  .gradient-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0);
+    background-image: radial-gradient(
+      circle farthest-side at center,
+      rgba(212, 139, 146, 0.7) 0%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+    border-radius: 50%;
+    top: 0%;
+    z-index: -1;
+    opacity: 1;
+  }
+
   @include viewport(tablet-desktop) {
     h1 {
       font-size: 3.5em;
     }
     img#hero-image {
-      width: min(32em, 60vw);
+      width: min(25em, 50vw);
     }
   }
-
   @include viewport(tablet) {
     h1 {
       font-size: 2.5em;
@@ -67,15 +101,29 @@
       z-index: 0;
     }
   }
-
   article {
-   display: flex;
-   flex-direction: column;
-   gap: 1em;
-   flex: 1;
-   justify-content: flex-start;
-   min-width: 0;
-   width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+    justify-content: flex-start;
+    width: fit-content;
+    z-index: 0;
+    @include viewport(mobile) {
+      align-items: center;
+    }
+    &:nth-of-type(1) {
+      @include viewport(tablet-desktop) {
+      margin-right: -10%;
+      }
+    }
+  }
+}
+
+@include viewport(tablet) {
+  
+  br {
+    display: none;
   }
 }
 
@@ -91,4 +139,5 @@
   #hero-section {
     padding-top: 0em;
   }
+
 }

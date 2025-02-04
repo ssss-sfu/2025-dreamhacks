@@ -3,15 +3,22 @@
 #about-section,
 #ssss-section {
   h2 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
   }
 
   h3 {
-    font-size: 1rem;
+    background-color: $color-text-light-heading;
+    font-size: 1.8rem;
+    text-align: center;
   }
   .ssss-img {
     min-width: 50%;
     border-radius: 1em;
+  }
+
+  br {
+    padding:0;
+    margin:0;
   }
 
   #about-image {
@@ -26,7 +33,7 @@
 
   .icons-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
   }
 
@@ -36,14 +43,16 @@
     place-items: center;
     padding: 2em 0;
     gap: 1em;
+    margin-right: 2dvw;
+    margin-left: 2dvw;
+    @include viewport(mobile) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   @include viewport(desktop) {
     flex-direction: row;
-
-    .icons-container {
-      justify-content: space-between;
-    }
   }
 }
 
@@ -57,7 +66,7 @@
   #about-section,
   #ssss-section {
     h2 {
-      text-align: center;
+      text-align: left;
     }
     .ssss-img {
       width: 90%;
@@ -68,10 +77,18 @@
   #about-section,
   #ssss-section {
     h2 {
-      text-align: center;
+      text-align: left;
+    }
+    h3 {
+      font-size: 1em;
     }
     .ssss-img {
       width: 90%;
+    }
+    .icon-container {
+      img {
+        width: 60%;
+      }
     }
   }
 }
