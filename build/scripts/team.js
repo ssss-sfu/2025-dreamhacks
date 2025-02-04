@@ -1,21 +1,19 @@
 const execArray = [
-  { name: "Joshua Li", role: "President" },
-  { name: "Kevin Chen", role: "Vice President" },
-  { name: "Gahee Kim", role: "Secretary" },
-  { name: "Mekdim Dereje", role: "Treasurer" },
+  { name: "Mekdim Dereje", role: "President" },
+  { name: "Randy Le Tran", role: "Vice President" },
+  { name: "Max Zhang", role: "Secretary" },
+  { name: "Andrew La Grange", role: "Treasurer" },
   { name: "Ethan Chou", role: "Director of Marketing" },
-  { name: "Chloe Yip", role: "Director of Activities" },
-  { name: "Max Zhang", role: "Director of Activities" },
-  { name: "Iris Au-Yeung", role: "Director of Visual Design" },
-  { name: "Jamie Chin", role: "External Representative" },
-  { name: "Bryan Dang", role: "Internal Representative" },
-  { name: "Andy Wang", role: "Fourth Year Representative" },
-  { name: "Jerry Deng", role: "Third Year Representative" },
-  { name: "Julie Wu", role: "Second Year Representative" },
-  { name: "Maria León Campos", role: "First Year Representative" },
-  { name: "Gabriel Ma", role: "First Year Representative" },
-  { name: "Jennifer Huang", role: "First Year Representative" },
-  { name: "Tal Zaloilov", role: "SFSS Council Representative" }
+  { name: "Jennifer Huang", role: "Director of Activities" },
+  { name: "Dagem Dereje", role: "Director of Activities" },
+  { name: "Maria León Campos", role: "Director of Visual Design" },
+  { name: "Damon Yiu", role: "External Representative" },
+  { name: "Ash Aung", role: "Internal Representative" },
+  { name: "Julie Wu", role: "Third Year Representative" },
+  { name: "Jaycie Say", role: "Second Year Representative" },
+  { name: "Aleeza Ahmed", role: "First Year Representative" },
+  { name: "Swara Bhate", role: "First Year Representative" },
+  { name: "Fabian Jonathan Siswanto", role: "SFSS Council Representative" }
 ]
 
 
