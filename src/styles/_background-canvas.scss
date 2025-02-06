@@ -1,0 +1,11 @@
+@import "./tokens.scss";
+
+.background-canvas {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    // width: 100vw;
+    // height: 100%;
+    z-index: -1; // Places canvas behind other content
+    // background: #000; // Fallback color
+}
