@@ -1,4 +1,5 @@
 @import "./tokens.scss";
+@import "./about-anim.scss";
 
 #about-section,
 #ssss-section {
@@ -9,7 +10,6 @@
   h3 {
     background-color: $color-text-light-heading;
     font-size: 1.8rem;
-    text-align: center;
   }
   .ssss-img {
     min-width: 50%;
@@ -17,15 +17,15 @@
   }
 
   br {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
   }
 
   #about-image {
     max-width: min(33em, 100vw);
     margin-left: -10%;
   }
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,9 +34,10 @@
   .icons-container {
     display: flex;
     justify-content: space-between;
+    margin-right: 3dvw;
+    margin-left: 3dvw;
     gap: 2rem;
-    margin-right: 2dvw;
-    margin-left: 2dvw;
+    text-align: center;
     @include viewport(mobile) {
       margin-right: 0;
       margin-left: 0;
@@ -47,8 +48,9 @@
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    padding: 2em 0;
+    padding: 4em 0 2em 0;
     gap: 1em;
+    width: fit-content;
   }
 
   @include viewport(desktop) {
@@ -87,7 +89,7 @@
     }
     .icon-container {
       img {
-        width: 60%;
+        width: 70%;
       }
     }
   }

@@ -1,0 +1,43 @@
+@import "./tokens.scss";
+
+#hidden {
+  visibility: hidden;
+}
+
+.star-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+  
+  #happy {
+    position: absolute;
+    animation: float-rotate-happy 3.2s ease-in-out infinite, twinkle 3.5s infinite ease-in-out;
+  }
+  
+  #neutral {
+    position: absolute;
+    animation: float-rotate-neutral 2.8s ease-in-out infinite, twinkle 4s infinite ease-in-out;
+  }
+}
+
+@keyframes float-rotate-happy {
+  0%,
+  100% {
+    transform: rotate(15deg) translateY(calc(-50% + 4px)) translateX(15%);
+  }
+  50% {
+    transform: rotate(15deg) translateY(calc(-50% - 4px)) translateX(15%);
+  }
+}
+
+@keyframes float-rotate-neutral {
+  0%,
+  100% {
+    transform: rotate(-15deg) translateX(-30%) translateY(calc(0% + 4px));
+  }
+  50% {
+    transform: rotate(-15deg) translateX(-30%) translateY(calc(0% - 4px));
+  }
+}

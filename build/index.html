@@ -40,10 +40,14 @@
   </header>
 
 
-  <div id="intro-image-section" class="container">
-    <div class="bg-placeholder"></div>
-    <img src="./assets/images/hero_main.svg" alt="Main DreamHacks Hero Image">
-  </div>
+  <section id="intro-image-section" class="container">
+    <!-- dynamic vs image -->
+    <div class="intro-image-container">
+      <img src="./assets/images/hero_main.webp" alt="DreamHacks 2025 Main Hero Image">
+      <img src="./assets/images/hero_main.webp" alt="DreamHacks 2025 Blur Hero Image">
+    </div>
+    <!-- <img src="./assets/images/hero_main2.webp" alt="DreamHacks 2025 Main Hero Image"> -->
+  </section>
 
   <section id="hero-section" class="container">
     <article>
@@ -56,19 +60,28 @@
       <!-- <button class="btn" disabled>Registration Closed</button> -->
     </article>
     <div class="hero-image-container">
-      <img id="hero-image" src="./assets/images/hero_secondary.webp"
-        alt="DreamHacks 2025 Logo, A light pink moon, and yellow 3 stars" />
-      <!-- Can Improve this gradient -->
-      <div class="gradient-circle"></div>
+      <img class="hero-moon" src="./assets/images/about_moon.webp"
+        alt="DreamHacks 2025 hero-image, A light pink moon" />
+      <div class="hero-gradient"></div>
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
     </div>
   </section>
 
   <section id="about-section" class="container">
     <article>
       <h2>What is DreamHacks?</h2>
-      <p>DreamHacks is this year’s iteration of the Software Systems Student Society's annual hackathon, SystemsHacks. It is a
-        12-hour, beginner-oriented hackathon that takes place at SFU’s Surrey campus and has been organized annually since 2017.
-        We aim to create a welcoming environment for new hackers to make new connections and learn something new. Each year,
+      <p>
+        DreamHacks is this year’s iteration of the Software Systems Student Society's annual hackathon, SystemsHacks. It
+        is a
+        12-hour, beginner-oriented hackathon that takes place at SFU’s Surrey campus and has been organized annually
+        since 2017.
+        We aim to create a welcoming environment for new hackers to make new connections and learn something new. Each
+        year,
         SystemsHacks takes on a new theme, and for 2025 it’s DreamHacks!
       </p>
       <div class="icons-container">
@@ -77,7 +90,11 @@
           <h3>12 Hours</h3>
         </article>
         <article class="icon-container">
-          <img src="assets/images/about_participants.webp" alt="Participants icon">
+          <div class="star-container">
+            <img id="happy" src="assets/images/about_star_happy.webp" alt="Star Happy icon">
+            <img id="neutral" src="assets/images/about_star_neutral.webp" alt="Star Neutral icon">
+            <img id="hidden" src="assets/images/about_participant.webp" alt="Star participants - Hidden Padding">
+          </div>
           <h3>100+ Participants</h3>
         </article>
         <article class="icon-container">
