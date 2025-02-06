@@ -7,8 +7,18 @@ let needsUpdate = true;
 const stars = [];
 const starsMoveSpeeds = {};
 
-// could also generate so it would be based on star density rather than hardcoded count
-const numStars = 200;
+// Calculate stars based on screen dimensions
+function calcNumStars() {
+    let canvasArea = canvas.width * canvas.height;
+
+    let numStars = canvasArea * 0.00014;
+
+    numStars = Math.min(numStars, 1000);
+    return Math.floor(numStars);
+}
+numStars = calcNumStars();
+
+
 const starSpeed = 0.2;
 
 // Create initial stars
@@ -58,6 +68,7 @@ window.addEventListener('scroll', () => {
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    numStars = calcNumStars();
     createStars() // redistribute stars on canvas when resized
     needsUpdate = true;
 }
