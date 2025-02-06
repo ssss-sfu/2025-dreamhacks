@@ -13,7 +13,8 @@ window.addEventListener('resize', resizeCanvas);
 
 // Star properties
 const stars = [];
-const numStars = 100;
+const starsMoveSpeeds = {};
+const numStars = 300;
 const starSpeed = 0.2;
 
 // Create initial stars
@@ -24,6 +25,8 @@ for (let i = 0; i < numStars; i++) {
         size: Math.random() * 2 + 1,
         opacity: Math.random()
     });
+
+    starsMoveSpeeds[i] = (Math.random() * 0.5 + 0.1 + Math.random() * 0.5 ) * 2;
 }
 
 // Scroll event listener
@@ -35,7 +38,7 @@ window.addEventListener('scroll', () => {
 
     // Update star positions based on scroll direction
     stars.forEach(star => {
-        star.y -= scrollDiff * starSpeed;
+        star.y -= scrollDiff * starSpeed * starsMoveSpeeds[stars.indexOf(star)];
         if (star.y > canvas.height) star.y = 0;
         if (star.y < 0) star.y = canvas.height;
     });
