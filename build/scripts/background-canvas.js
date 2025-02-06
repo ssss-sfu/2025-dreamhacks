@@ -11,6 +11,8 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
+let needsUpdate = true;
+
 // Star properties
 const stars = [];
 const starsMoveSpeeds = {};
@@ -42,10 +44,16 @@ window.addEventListener('scroll', () => {
         if (star.y > canvas.height) star.y = 0;
         if (star.y < 0) star.y = canvas.height;
     });
+
+    needsUpdate = true;
 });
 
 // Animation function
 function animate() {
+    if (!needsUpdate) {
+        requestAnimationFrame(animate);
+        return;
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw stars
@@ -56,6 +64,7 @@ function animate() {
         ctx.fill();
     });
 
+    needsUpdate = false;
     requestAnimationFrame(animate);
 }
 
