@@ -1,0 +1,8 @@
+@import "./tokens.scss";
+
+.background-canvas {
+    position: fixed !important; // override styling in main.scss
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
