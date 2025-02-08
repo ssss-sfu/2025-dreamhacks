@@ -4,7 +4,7 @@ let header = document.querySelector(".header")
 
 let scrollYValue = 80;
 window.onscroll = () => {
-  // nav.style.display = "none";
+//   nav.style.display = "none";
 
   if (document.body.scrollTop > scrollYValue || document.documentElement.scrollTop > scrollYValue) {
     header.classList.add("header-scrolled");
