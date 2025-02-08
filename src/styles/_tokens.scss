@@ -3,34 +3,32 @@
 */
 
 $color-background: #22192F;;
-$color-background-footer: linear-gradient(180deg, #15011E 0%, #1B0A3F 98.63%);
-$color-background-button: linear-gradient(270deg, #5bcbff 14.36%, #fd89ff 97.52%);
+$color-background-footer: linear-gradient(180deg, #22192F 45%, #1d1d46 98.63%);
+$color-background-button: #7db6a4;
 
 $color-text: #fff;
-$color-text-heading: #8ad5ff;
-$color-text-heading-fallback: #e725ff;
+$color-text-heading: #fb9bb2;
+$color-text-heading-fallback: #FFEEC6;
 
 $color-text-light-heading: #E4F7F3;
 $color-text-subheading: #FFEEC6;
-$color-gradient-start: #5bcbff;
-$color-gradient-end: #fd89ff;
+$color-gradient-start: #E4F7F3;
+$color-gradient-end: #fb9bb2;
 
 
 /*
   Typography
 */
 @font-face {
-  font-family: "Hubot Sans";
-  src: url('./assets/fonts/Hubot-Sans-Regular.woff2');
-  src: url('./assets/fonts/Hubot-Sans-Regular.woff2') format("woff2");
+  font-family: "DM Sans";
+  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Hubot Sans";
-  src: url('./assets/fonts/Hubot-Sans-SemiBold.woff2');
-  src: url('./assets/fonts/Hubot-Sans-SemiBold.woff2') format("woff2");
+  font-family: "DM Sans";
+  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
