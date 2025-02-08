@@ -1,13 +1,15 @@
 const faqsJson = [
   {
-    question: "Why ChaosHacks?",
-    answer:
-      "We decided on ChaosHacks as the theme because there’s so many ways we interact with chaos in our lives that can be the source of inspiration. From a cluttered computer desktop to an unpredictable bus schedule, we want you to have a look at those chaotic things in your life and think about ways you can eliminate it, control it, or even embrace it! And like with chaos itself,  everyone may start with the same theme but will bring their own interpretations to it that will result in cool and unique projects.",
+    question: "Why DreamHacks?",
+    answer: 
+      // TODO: UPDATE THE IDEA BEHIND THE THEME
+      "TODO UPDATE THIS TEXT: We decided on ChaosHacks as the theme because there’s so many ways we interact with chaos in our lives that can be the source of inspiration. From a cluttered computer desktop to an unpredictable bus schedule, we want you to have a look at those chaotic things in your life and think about ways you can eliminate it, control it, or even embrace it! And like with chaos itself,  everyone may start with the same theme but will bring their own interpretations to it that will result in cool and unique projects.",
   },
   {
     question: "Where is the venue?",
     answer:
-      "ChaosHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
+      // TODO: CONFIRM VENUE
+      "TODO CONFIRM VENUE: DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
     question: "What is a hackathon?",
@@ -22,7 +24,8 @@ const faqsJson = [
   {
     question: "How should the theme be integrated into my project?",
     answer:
-      "The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. There’s plenty of ways chaos manifests, so you can pretty much take it in whichever way works for you. ",
+      // TODO: UPDATE REQUIRED
+      "TODO UPDATE THIS TEXT: The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. There’s plenty of ways chaos manifests, so you can pretty much take it in whichever way works for you. ",
   },
   {
     question: "How can I register my team?",
@@ -46,11 +49,13 @@ var chevronImg = document.createElement("img");
 chevronImg.setAttribute("src", "./assets/images/icons/chevron-down.svg");
 chevronImg.setAttribute("alt", "Chevron");
 
-// Create the image for the purple star
-var purpleStarImg = document.createElement("img");
-purpleStarImg.setAttribute("src", "./assets/images/faqs_purple-star.png");
-purpleStarImg.setAttribute("alt", "Leaf");
+// reusing a random asset that already exists, could be changed later
+var faqIcon = document.createElement("img");
+faqIcon.setAttribute("src", "./assets/images/about_star.webp");
+faqIcon.setAttribute("alt", "faq icon");
 
+// generates an html element that contains one faq 
+// this includes an icon, then the question, and the answer
 const toHtml = (faq, index) => {
   // Create the checkbox input
   var checkboxInput = document.createElement("input");
@@ -80,7 +85,7 @@ const toHtml = (faq, index) => {
   faqItem.appendChild(checkboxInput);
   faqItem.appendChild(label);
   faqItem.appendChild(contentParagraph);
-  faqItem.appendChild(purpleStarImg.cloneNode());
+  faqItem.appendChild(faqIcon.cloneNode());
 
   return faqItem;
 };
