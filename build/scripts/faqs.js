@@ -55,6 +55,13 @@ var faqIcon = document.createElement("img");
 faqIcon.setAttribute("src", "./assets/images/about_star.webp");
 faqIcon.setAttribute("alt", "faq icon");
 
+const getRandomRotation = () => {
+  // makes the faq section a little bit less boring by rotating the icon
+  // uses hardcoded values because pure randomness looks bad
+  const rotations = [30, 90, 270]; 
+  return rotations[Math.floor(Math.random() * rotations.length)];
+};
+
 // generates an html element that contains one faq 
 // this includes an icon, then the question, and the answer
 const toHtml = (faq, index) => {
@@ -79,6 +86,10 @@ const toHtml = (faq, index) => {
   contentParagraph.classList.add("content");
   contentParagraph.textContent = faq.answer;
 
+  // Apply random rotation to the faqIcon
+  var rotatedFaqIcon = faqIcon.cloneNode();
+  rotatedFaqIcon.style.transform = `rotate(${getRandomRotation()}deg)`;
+
   // Append all elements to the main container
   var faqItem = document.createElement("div");
   faqItem.classList.add("faq-item");
@@ -86,14 +97,16 @@ const toHtml = (faq, index) => {
   faqItem.appendChild(checkboxInput);
   faqItem.appendChild(label);
   faqItem.appendChild(contentParagraph);
-  faqItem.appendChild(faqIcon.cloneNode());
+  faqItem.appendChild(rotatedFaqIcon);
 
   return faqItem;
 };
+
 const faqHtmlList = faqsJson.map((item, index) => toHtml(item, index));
 const faqsList = document.querySelector("#faq-list");
 
 faqHtmlList.forEach((faqItem) => {
   faqsList.appendChild(faqItem);
 });
-console.log("GENERATED FAQS")
+
+console.log("GENERATED FAQS");
