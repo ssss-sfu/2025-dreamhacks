@@ -48,6 +48,7 @@ const faqsJson = [
 var chevronImg = document.createElement("img");
 chevronImg.setAttribute("src", "./assets/images/icons/chevron-down.svg");
 chevronImg.setAttribute("alt", "Chevron");
+chevronImg.width = 20;
 
 // reusing a random asset that already exists, could be changed later
 var faqIcon = document.createElement("img");
@@ -95,3 +96,4 @@ const faqsList = document.querySelector("#faq-list");
 faqHtmlList.forEach((faqItem) => {
   faqsList.appendChild(faqItem);
 });
+console.log("GENERATED FAQS")
