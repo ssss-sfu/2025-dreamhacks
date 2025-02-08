@@ -108,5 +108,3 @@ const faqsList = document.querySelector("#faq-list");
 faqHtmlList.forEach((faqItem) => {
   faqsList.appendChild(faqItem);
 });
-
-console.log("GENERATED FAQS");
