@@ -2,14 +2,12 @@ const faqsJson = [
   {
     question: "Why DreamHacks?",
     answer: 
-      // TODO: UPDATE THE IDEA BEHIND THE THEME
-      "TODO UPDATE THIS TEXT: We decided on ChaosHacks as the theme because there’s so many ways we interact with chaos in our lives that can be the source of inspiration. From a cluttered computer desktop to an unpredictable bus schedule, we want you to have a look at those chaotic things in your life and think about ways you can eliminate it, control it, or even embrace it! And like with chaos itself,  everyone may start with the same theme but will bring their own interpretations to it that will result in cool and unique projects.",
+      "If you can dream it, you can do it - or in this case, build it at DreamHacks! This year is centered around building anything your heart may desire. If you have a project that you have been wanting to create for the longest time, or a project that will help you actually achieve your dreams—the possibilities are endless! This is your opportunity to express any creative vision you have or transform those ideas into the reality that you have been dying to do for the longest time."
   },
   {
     question: "Where is the venue?",
     answer:
-      // TODO: CONFIRM VENUE
-      "TODO CONFIRM VENUE: DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
+      "DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
     question: "What is a hackathon?",
@@ -24,9 +22,8 @@ const faqsJson = [
   {
     question: "How should the theme be integrated into my project?",
     answer:
-      // TODO: UPDATE REQUIRED
-      "TODO UPDATE THIS TEXT: The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. There’s plenty of ways chaos manifests, so you can pretty much take it in whichever way works for you. ",
-  },
+      "The theme can be incorporated into your project however you see fit! DreamHacks was chosen so you, the hackers, could let your imaginations run wild. If you wanted to create a project to help achieve your dreams, great! If you wanted to create the project of your dreams, that also works too! In the end, it is fully up to you on how you want to work the theme into your work. Think of the theme as simply a prompt to help you get started."
+    },
   {
     question: "How can I register my team?",
     answer:
