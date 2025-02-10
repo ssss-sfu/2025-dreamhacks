@@ -13,4 +13,10 @@
         text-align: center;
         margin-top: 3rem;
     }
+
+    @include viewport(mobile) {
+        #hero-section h2 {
+            margin-top: 8rem;
+        }
+    }
 }
