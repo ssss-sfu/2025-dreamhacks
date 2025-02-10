@@ -7,7 +7,6 @@ const faqsJson = [
   {
     question: "Where is the venue?",
     answer:
-      // TODO: CONFIRM VENUE
       "DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
@@ -23,8 +22,7 @@ const faqsJson = [
   {
     question: "How should the theme be integrated into my project?",
     answer:
-      // TODO: UPDATE REQUIRED
-      "The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. Dreams come in many shapes and forms, and it's totally up to you on how you want to make them become reality"
+      "The theme can be incorporated into your project however you see fit! DreamHacks was chosen so you, the hackers, could let your imaginations run wild. If you wanted to create a project to help achieve your dreams, great! If you wanted to create the project of your dreams, that also works too! In the end, it is fully up to you on how you want to work the theme into your work. Think of the theme as simply a prompt to help you get started."
     },
   {
     question: "How can I register my team?",
