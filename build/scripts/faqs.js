@@ -1,13 +1,14 @@
 const faqsJson = [
   {
-    question: "Why ChaosHacks?",
-    answer:
-      "We decided on ChaosHacks as the theme because there’s so many ways we interact with chaos in our lives that can be the source of inspiration. From a cluttered computer desktop to an unpredictable bus schedule, we want you to have a look at those chaotic things in your life and think about ways you can eliminate it, control it, or even embrace it! And like with chaos itself,  everyone may start with the same theme but will bring their own interpretations to it that will result in cool and unique projects.",
+    question: "Why DreamHacks?",
+    answer: 
+      "If you can dream it, you can do it - or in this case, build it at DreamHacks! This year is centered around building anything your heart may desire. If you have a project that you have been wanting to create for the longest time, or a project that will help you actually achieve your dreams—the possibilities are endless! This is your opportunity to express any creative vision you have or transform those ideas into the reality that you have been dying to do for the longest time."
   },
   {
     question: "Where is the venue?",
     answer:
-      "ChaosHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
+      // TODO: CONFIRM VENUE
+      "DreamHacks will take place in the SFU’s state-of-the-art Engineering Building, located in Surrey Central. Opened in 2019, this building is home to SFU’s Mechatronics Systems Engineering, Sustainable Energy Engineering, and Software Systems programs and has the best in campus design SFU has to offer with its lecture theaters, labs, and work spaces.",
   },
   {
     question: "What is a hackathon?",
@@ -22,8 +23,9 @@ const faqsJson = [
   {
     question: "How should the theme be integrated into my project?",
     answer:
-      "The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. There’s plenty of ways chaos manifests, so you can pretty much take it in whichever way works for you. ",
-  },
+      // TODO: UPDATE REQUIRED
+      "The theme can be interpreted loosely in whatever way you see fit; it is just a prompt to get you thinking. Dreams come in many shapes and forms, and it's totally up to you on how you want to make them become reality"
+    },
   {
     question: "How can I register my team?",
     answer:
@@ -45,12 +47,22 @@ const faqsJson = [
 var chevronImg = document.createElement("img");
 chevronImg.setAttribute("src", "./assets/images/icons/chevron-down.svg");
 chevronImg.setAttribute("alt", "Chevron");
+chevronImg.width = 20;
 
-// Create the image for the purple star
-var purpleStarImg = document.createElement("img");
-purpleStarImg.setAttribute("src", "./assets/images/faqs_purple-star.png");
-purpleStarImg.setAttribute("alt", "Leaf");
+// reusing a random asset that already exists, could be changed later
+var faqIcon = document.createElement("img");
+faqIcon.setAttribute("src", "./assets/images/about_star.webp");
+faqIcon.setAttribute("alt", "faq icon");
 
+const getRandomRotation = () => {
+  // makes the faq section a little bit less boring by rotating the icon
+  // uses hardcoded values because pure randomness looks bad
+  const rotations = [30, 90, 270]; 
+  return rotations[Math.floor(Math.random() * rotations.length)];
+};
+
+// generates an html element that contains one faq 
+// this includes an icon, then the question, and the answer
 const toHtml = (faq, index) => {
   // Create the checkbox input
   var checkboxInput = document.createElement("input");
@@ -73,6 +85,10 @@ const toHtml = (faq, index) => {
   contentParagraph.classList.add("content");
   contentParagraph.textContent = faq.answer;
 
+  // Apply random rotation to the faqIcon
+  var rotatedFaqIcon = faqIcon.cloneNode();
+  rotatedFaqIcon.style.transform = `rotate(${getRandomRotation()}deg)`;
+
   // Append all elements to the main container
   var faqItem = document.createElement("div");
   faqItem.classList.add("faq-item");
@@ -80,10 +96,11 @@ const toHtml = (faq, index) => {
   faqItem.appendChild(checkboxInput);
   faqItem.appendChild(label);
   faqItem.appendChild(contentParagraph);
-  faqItem.appendChild(purpleStarImg.cloneNode());
+  faqItem.appendChild(rotatedFaqIcon);
 
   return faqItem;
 };
+
 const faqHtmlList = faqsJson.map((item, index) => toHtml(item, index));
 const faqsList = document.querySelector("#faq-list");
 
