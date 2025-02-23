@@ -11,7 +11,6 @@
     color: $color-text-heading-fallback;
   }
 }
-
 .sponsors {
   display: grid;
   gap: 1.5rem 1rem;
@@ -30,25 +29,48 @@
     border-radius: 30px;
     text-decoration: none;
     font-size: 2rem;
+    height: 10rem;
+    width: auto;
 
     img {
       height: 100%;
       width: auto;
+      object-fit: contain;
     }
 
     grid-column: span 2;
   }
 
+  .sponsor-mini-container {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr;  /* Single column on mobile */
+    gap: 1rem;
+
+    .sponsor.mini {
+      grid-column: span 1;
+      height: 8rem;
+    }
+  }
 
   @include viewport(desktop) {
     grid-template-columns: repeat(6, 1fr);
+    
     .sponsor {
       grid-column: span 3;
     }
+    
     .sponsor.big {
       grid-column: span 6;
     }
 
+    .sponsor-mini-container {
+      grid-column: span 6;
+      grid-template-columns: repeat(3, 1fr);
+      
+      .sponsor.mini {
+        grid-column: span 1;
+      }
+    }
   }
-
 }
