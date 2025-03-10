@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.png" />
+  <script src="scripts/navbar.js" defer></script>
+  <script src="scripts/navbar-hide-scroll.js" defer></script>
+  <script src="scripts/faqs.js" defer></script>
+  <script src="scripts/team.js" defer></script>
+  <script src="scripts/background-canvas.js" defer></script>
+
+  <title>DreamHacks '25 | Main</title>
+  <meta name="description"
+    content="Join DreamHacks 2025 on March 15th, the annual hackathon from SFU's Software Systems Student Society.">
+  <meta name="og:title" property="og:title" content="DreamHacks | SFU Software Systems SystemsHacks 2025">
+</head>
+
+<body>
+  <header class="header">
+    <div class="mobile-header">
+      <a href="./index.html">
+        <img class="logo" src="./assets/images/logo.png" alt="DreamHacks logo in navigation" />
+      </a>
+      <img class="hamburger" src="./assets/images/bars-solid.svg" alt="hamburger dropdown">
+    </div>
+
+    <nav class="nav">
+      <ul class="list">
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#the-past">The Past</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://sfussss.org/" target="_blank">SSSS</a></li>
+        <li> <a href="https://sfussss.org/2024-chaoshacks/" target="_blank">2024</a>
+        <li class="handbook" onclick="location.href=`handbook.html`;"><a href="handbook.html">Handbook</a></li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <canvas id="background-canvas" class="background-canvas"></canvas>
+  <section id="intro-image-section" class="container">
+    <div class="intro-image-container">
+      <img src="./assets/images/hero_main.webp" alt="DreamHacks 2025 Main Hero Image">
+      <img src="./assets/images/hero_main.webp" alt="DreamHacks 2025 Blur Hero Image">
+    </div>
+  </section>
+
+  <section id="hero-section" class="container">
+    <article>
+      <h1>DreamHacks</h1>
+      <h3>March 15, 2025</h3>
+
+      <p>SFU Software Systems Student Society <br class="hide-on-sm" />presents their 9th annual hackathon!</p>
+      <p class="medium">Applications close Feb 25</p>
+      <button class="btn" onclick="location.href=`https://lu.ma/wdd5by1f`" disabled>Registration Closed!</button>
+      <!-- <button class="btn" disabled>Registration Closed</button> -->
+    </article>
+    <div class="hero-image-container">
+      <img class="hero-moon" src="./assets/images/about_moon.webp"
+        alt="DreamHacks 2025 hero-image, A light pink moon" />
+      <div class="hero-gradient"></div>
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
+      <img class="hero-star" src="./assets/images/about_star.webp"
+        alt="DreamHacks 2025 hero-image, A single yellow star" />
+    </div>
+  </section>
+
+  <section id="about-section" class="container">
+    <article>
+      <h2>What is DreamHacks?</h2>
+      <p>
+        DreamHacks is this year’s iteration of the Software Systems Student Society's annual hackathon, SystemsHacks. It
+        is a
+        12-hour, beginner-oriented hackathon that takes place at SFU’s Surrey campus and has been organized annually
+        since 2017.
+        We aim to create a welcoming environment for new hackers to make new connections and learn something new. Each
+        year,
+        SystemsHacks takes on a new theme, and for 2025 it’s DreamHacks!
+      </p>
+      <div class="icons-container">
+        <article class="icon-container">
+          <img src="assets/images/about_time.webp" alt="Time icon">
+          <h3>12 Hours</h3>
+        </article>
+        <article class="icon-container">
+          <div class="star-container">
+            <img id="happy" src="assets/images/about_star_happy.webp" alt="Star Happy icon">
+            <img id="neutral" src="assets/images/about_star_neutral.webp" alt="Star Neutral icon">
+            <img id="hidden" src="assets/images/about_participant.webp" alt="Star participants - Hidden Padding">
+          </div>
+          <h3>100+ Participants</h3>
+        </article>
+        <article class="icon-container">
+          <img src="assets/images/about_location.webp" alt="Map icon">
+          <h3>SFU Surrey</h3>
+        </article>
+      </div>
+    </article>
+
+    <img id="about-image" class="hide-on-sm" src="assets/images/comet.webp" alt="DreamHacks Comet">
+  </section>
+
+  <section id="ssss-section" class="container">
+    <article>
+      <h2>Software Systems Student Society</h2>
+      <p>The Software Systems Student Society (SSSS) is the student union that represents the interests of the Software
+        Systems student body at SFU. We organize events to encourage making valuable peer connections and complement the
+        academic experience, such as SystemsHacks right here!
+      </p>
+    </article>
+    <img class="ssss-img" src="assets/images/ssss-about-chaos.webp" alt="Software Systems 2023/ 2024 executives photo">
+  </section>
+
+  <section id="the-past" class="container the-past">
+    <h2>Past Hackathons</h2>
+    <section>
+      <div>
+        <iframe src="https://www.youtube.com/embed/K6R0ePokEIs" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <h3>2024 - ChaosHacks</h3>
+          <p>
+            Our theme, ChaosHacks, highlights the chaos in everyday life—whether it’s a cluttered desktop or an
+            unpredictable bus schedule. We challenge you to eliminate, control, or embrace it in your own way,
+            leading to unique and creative projects.</p>
+        </div>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/9oGCsOMFSAQ" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <h3>2023 - RootHacks</h3>
+          <p>The name “RootHacks” reflects a broadly plant-based theme, and we hope to inspire participants to consider
+            how their personal roots can offer them a unique perspective when building their project.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="sponsors" class="container">
+    <h2>Sponsors</h2>
+    <br>
+    <div class="sponsors">
+      <a class="sponsor" target="_blank" href="https://www.dialpad.com/">
+        <img src="./assets/images/sponsors/dialpad.svg" alt="Dialpad sponsor logo">
+      </a>
+      <a class="sponsor" target="_blank" href="https://www.wondershare.com">
+        <img src="./assets/images/sponsors/wondershare.svg" alt="Wondershare sponsor logo">
+      </a>
+      <div class="sponsor-mini-container">
+        <a class="sponsor mini" target="_blank" href="https://codecrafters.io/">
+          <img src="./assets/images/sponsors/codecrafters.png" alt="Codecrafters logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://www.loginradius.com/">
+          <img src="./assets/images/sponsors/loginradius.png" alt="Login Radius logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://gen.xyz/">
+          <img src="./assets/images/sponsors/xyz.svg" alt="Gen xyz sponsor logo">
+        </a>
+
+        <a class="sponsor mini" target="_blank" href="https://www.arista.com/">
+          <img src="./assets/images/sponsors/arista-networks.svg" alt="Arista Networks sponsor logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://www.stevespokebar.ca/">
+          <img src="./assets/images/sponsors/steves-poke-bar.svg" alt="Steve's Poke Bar Sponsor logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://centralcity.ca/">
+          <img src="./assets/images/sponsors/centralCity.svg" alt="Central City sponsor logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://www.sfu.ca/fas/computing.html">
+          <img src="./assets/images/sponsors/sfu-cs.png" alt="SFU Computing Science logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://sfss.ca/">
+          <img src="./assets/images/sponsors/sfss.svg" alt="SFU Simon Fraser Student Society logo">
+        </a>
+        <a class="sponsor mini" target="_blank" href="https://www.sfu.ca/fas.html">
+          <img src="./assets/images/sponsors/fas.svg" alt="SFU Faculty of Applied Science logo">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="faq" class="container">
+    <h2>FAQs</h2>
+    <div id="faq-container">
+      <div id="faq-list" class="list"></div>
+    </div>
+    <!-- <img id="faq-img" src="./assets/images/faqs_main.png" alt="Decorations, neon face and purple tune"> -->
+
+  </section>
+
+  <section id="team" class="container">
+    <h2>Meet The Team</h2>
+    <div id="exec-list">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <img src="./assets/images/footer_dreamcatcher.webp"
+        alt="The Software Systems Mascot, Seb, with a seedling sprouting from the top of his head" />
+      <div>
+        <img src="./assets/images/ssss-logo-full-white.svg"
+          alt="The Software Systems student society logo, in all white" />
+        <div class="icons">
+          <a href="https://www.youtube.com/@SoftwareSystemsStudentSociety" target="_blank" rel="nofollow"><img
+              src="./assets/images/icons/icon-youtube.svg" alt="Youtube icon" /></a>
+          <a href="https://discord.gg/hY7WjXt" target="_blank" rel="nofollow"><img
+              src="./assets/images/icons/icon-discord.svg" alt="Discord icon" /></a>
+          <a href="https://www.instagram.com/ssss.sfu/" target="_blank" rel="nofollow"><img
+              src="./assets/images/icons/icon-instagram.svg" alt="Instagram icon" /></a>
+          <a href="https://www.linkedin.com/company/19037531/" target="_blank" rel="nofollow"><img
+              src="./assets/images/icons/icon-linkedin.svg" alt="LinkedIn icon" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
